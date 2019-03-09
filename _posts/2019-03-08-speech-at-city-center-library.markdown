@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "April 06, 2019 11:00am Presentation At City Center Library, Coquitlam!"
-date:   2019-02-26 19:27:03 -0800
+date:   2019-03-08 16:02:20 -0800
 categories: presentation
 ---
 
