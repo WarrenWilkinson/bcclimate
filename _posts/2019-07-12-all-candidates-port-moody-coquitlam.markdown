@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Climate Change Debate, Port Moody Coquitlam. Are you Interested?"
-date:   2019-07-12 09:00:20 -0800
+date:   2019-07-12 07:20:20 -0800
 categories: debate
 ---
 
