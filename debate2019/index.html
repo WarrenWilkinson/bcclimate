@@ -16,6 +16,9 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-panels.min.js"></script>
 		<script src="js/init.js"></script>
+		<script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+		<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+		<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -103,7 +106,8 @@
 						  <p>The Climate Crisis is the <strong>defining</strong> issue of our times. Canada has declared a Climate Emergency and every major political party has a plan for tackling the crisis.  We have a full slate of wonderful candidates in our riding, so lets give them the opportunity to tell us how their approach will address this urgent need.</p>
 						  <p>Please like us on <a href="https://www.facebook.com/Interest-Group-for-an-All-Candidate-Port-Moody-Coquitlam-Climate-Debate-396835850961489">facebook</a>. And if you haven't had a chance, add yourself to our mailing list here:</p>
 
-						  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfExNZby4fi3-C7uHrIpd82zbuJrwhdg7wSNjnr4n8HXL5CBg/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+						  <!-- REMOVE OLD GOOGLE FORM -->
+						  <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfExNZby4fi3-C7uHrIpd82zbuJrwhdg7wSNjnr4n8HXL5CBg/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe> -->
 
 							<!-- follow us on <a href="http://twitter.com/templatedco">Twitter</a>.</p> -->
 							<!-- <p>Sed etiam vestibulum velit, euismod lacinia quam nisl id lorem. Quisque erat. Vestibulum pellentesque, justo mollis pretium suscipit, justo nulla blandit libero, in blandit augue justo quis nisl. Fusce mattis viverra elit. Fusce quis tortor. Consectetuer adipiscing elit. Nam pede erat, porta eu, lobortis eget lorem ipsum dolor.</p> -->
@@ -117,16 +121,52 @@
 								<h2>Quick Links</h2>
 							</header>
 							<ul class="style">
+							  <li>
+							    <p class="posted" style="color: #333333">Sign Up for Email Updates!</p>
+							    <img src="images/email.jpg" alt="" />
+							    <form name="subscribe_email_form">
+							      <input name="email" type="email" placeholder="email" required="true"/>
+							      <button type="submit">Subscribe</button>
+							    </form>
+							    <p class="text" id="email_subscribe_message"></p>
+							    <script type="text/javascript" >
+							      const scriptURL = 'https://script.google.com/macros/s/AKfycbx1zYO6uPedSbKImhsR39uYm0UgqU3n07fb08E-SnUwEBqrJuI/exec';
+							      const form = document.forms["subscribe_email_form"];
+							      const field = form.elements["email"];
+							      const message = document.getElementById("email_subscribe_message");
+							      
+							      form.addEventListener('submit', e => {
+							      e.preventDefault();
+							      data = new FormData(form);
+							      field.disabled = true;
+							      message.innerHTML = "Subscribing...";
+							      fetch(scriptURL, { method: 'POST', body: data})
+							      .then(response => {
+							         field.disabled = false;
+ 							         console.log('Success!', response);
+							         message.innerHTML = "Success!";
+							         field.value = "";
+							         alert('Successly Subscribed!');
+							      })
+							      .catch(error => {
+							         field.disabled = false;
+							         message.innerHTML = "Complete!";
+							         field.value = "";
+							         console.log('Complete!', error.message);
+							      });
+							      });
+							    </script>
+							  </li>
 								<li>
-									<p class="posted">July 13, 2019  |  (24 )  Likes</p>
+									<p class="posted">July 13, 2019  |  (31 )  Likes</p>
 									<img src="images/fb.jpg" alt="" />
 									<p class="text"><a href="https://www.facebook.com/Interest-Group-for-an-All-Candidate-Port-Moody-Coquitlam-Climate-Debate-396835850961489">Facebook Interest Group</a></p>
 								</li>
-								<li>
-									<p class="posted">July 11, 2019  |  (12 )  Responses</p>
-									<img src="images/pic05.jpg" alt="" />
-									<p class="text"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfExNZby4fi3-C7uHrIpd82zbuJrwhdg7wSNjnr4n8HXL5CBg">Google Signup Form</a></p>
-								</li>
+							        <!-- <li> -->
+								<!-- 	<p class="posted">July 11, 2019  |  (13 )  Responses</p> -->
+								<!-- 	<img src="images/pic05.jpg" alt="" /> -->
+								<!-- 	<p class="text"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfExNZby4fi3-C7uHrIpd82zbuJrwhdg7wSNjnr4n8HXL5CBg">Google Signup Form</a></p> -->
+								<!-- </li> -->
 								<!-- <li> -->
 								<!-- 	<p class="posted">August 11, 2002  |  (10 )  Comments</p> -->
 								<!-- 	<img src="images/pic06.jpg" alt="" /> -->
