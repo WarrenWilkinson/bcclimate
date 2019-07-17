@@ -26,5 +26,5 @@ If you're not on facebook, but want the occasional update email, please fill in 
 [coquitlam]: https://www.reddit.com/r/coquitlam/comments/cc23v9/im_setting_up_an_all_candidate_debate_in_port/
 [outreachform]: https://docs.google.com/forms/d/e/1FAIpQLSfExNZby4fi3-C7uHrIpd82zbuJrwhdg7wSNjnr4n8HXL5CBg/viewform
 [facebook]: https://www.facebook.com/Interest-Group-for-an-All-Candidate-Port-Moody-Coquitlam-Climate-Debate-396835850961489
-[calendar]: https://bcclimate.ca/debate2019/calendar.html
-[homepage]: https://bcclimate.ca/debate2019/index.html
+[calendar]: https://www.bcclimate.ca/debate2019/calendar.html
+[homepage]: https://www.bcclimate.ca/debate2019/index.html
