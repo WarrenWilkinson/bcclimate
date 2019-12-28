@@ -17,8 +17,8 @@ title: BC Climate
 email: warrenwilkinson@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   British Columbia, and all of Canada, needs to mobilize to fight
-  climate change. BCClimate works to bring this about through
-  community presentations, non-violent civic action and dialogue with governing bodies.
+  climate change. BCClimate is a personal blog of Warren Wilkinson,
+  who rarely posts anything.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.bcclimate.ca"
 # twitter_username: jekyllrb
